@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Manage Channel Points",
+    "description": "Reads and Accepts or Rejects channel point redemptions.",
+    "version": "1",
+    "author": "Kemal Holubeshen",
+    "browser_action":{
+        "default_popup":"index.html",
+        "default_title":"Browser Popup",
+        "default_icon":"images/get_started16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.twitch.tv/popout/headbanditkillian/reward-queue"],
+        "js": ["socket.io.js","content.js"]
+      }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    }
+}

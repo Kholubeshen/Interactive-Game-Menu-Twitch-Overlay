@@ -1,0 +1,9 @@
+body {
+    width: 512px;
+    height: 512px;
+    justify-content: center;
+    align-items:center;
+}
+#display {
+    border: 1px dashed black;
+}
